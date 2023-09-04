@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Navbar Example</title>
+    <link rel="stylesheet" href="tempstyle.css">
+</head>
+<body>
+    <div class="sidenav">
+        <img src="logo.jpeg" alt="RichPanel" class="logos">
+        <a href="#">Chat</a>
+        <a href="#">About</a>
+        <a href="/login" id="clicktogo">Logout</a>
+    </div>
+
+    <div class="content">
+        <!-- Content of your main page goes here -->
+    </div>
+
+    <div class="chat-sidenav">
+        <a href="#">Deepak</a>
+        <a href="#">Akshay</a>
+        <a href="#">Naina</a>
+    </div>
+    <div class="chat-content">
+        <div id="deepak" class="chat-box">
+            <span style="font-weight:bold;font-size:18px;">Deepak</span>
+            <input id="deepak-message" type="text"placeholder="Type a message...">
+            <button id="deepak-send">Send</button>
+        </div>
+        <div id="akshay" class="chat-box">
+            <span style="font-weight:bold;font-size:18px;">Akshay</span>
+            <input id="akshay-message" type="text" placeholder="Type a message...">
+            <button id="akshay-send">Send</button>
+        </div>
+        <div id="naina" class="chat-box">
+            <span style="font-weight:bold;font-size:18px;">Naina</span>
+            <input id="naina-message" type="text" placeholder="Type a message...">
+            <button id="naina-send">Send</button>
+        </div>
+    </div>
+    
+    <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    const chatNav = document.querySelector('.chat-sidenav');
+    const chatContent = document.querySelector('.chat-content');
+    const chatBoxes = document.querySelectorAll('.chat-box');
+
+    // Function to open the chat sub-navigation
+    function openChatNav() {
+        chatNav.style.width = '250px';
+    }
+
+    // Function to close the chat sub-navigation
+    function closeChatNav() {
+        chatNav.style.width = '0';
+    }
+
+    // Event listener for clicking on "Chat" to open/close the sub-navigation
+    chatNav.querySelector('a[href="#"]').addEventListener('click', function (e) {
+        e.preventDefault();
+        if (chatNav.style.width === '250px') {
+            closeChatNav();
+        } else {
+            openChatNav();
+        }
+    });
+
+    // Function to show the chat box for a specific person
+    function showChatBox(personId) {
+        chatBoxes.forEach(function (box) {
+            box.style.display = 'none';
+        });
+        const selectedBox = document.getElementById(personId);
+        if (selectedBox) {
+            selectedBox.style.display = 'block';
+        }
+    }
+
+    // Event listeners for each person's name
+    chatNav.querySelectorAll('.chat-sidenav a').forEach(function (nameLink) {
+        nameLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            const personId = nameLink.textContent.toLowerCase(); // Use the person's name as the ID
+            showChatBox(personId);
+        });
+    });
+});
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const chatNav = document.querySelector('.chat-sidenav');
+    const mainNav = document.querySelector('.sidenav');
+
+    // Function to open the chat sub-navigation
+    function openChatNav() {
+        chatNav.style.width = '250px';
+    }
+
+    // Function to close the chat sub-navigation
+    function closeChatNav() {
+        chatNav.style.width = '0';
+    }
+
+    // Event listener for clicking on "Chat" to open/close the sub-navigation
+    mainNav.querySelector('a[href="#"]').addEventListener('click', function (e) {
+        e.preventDefault();
+        if (chatNav.style.width === '250px') {
+            closeChatNav();
+        } else {
+            openChatNav();
+        }
+    });
+});
+
+
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+/* Existing styles for the main sidebar */
+/* ... */
+
+/* Style for chat sidebar */
+.sidebar{
+
+    width: 250px;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+
+    overflow-y: auto;
+    transition: left 0.3s ease-in-out;
+}
+.sidebar li a{
+    color:white;
+}
+.chat-sidebar {
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    overflow-y: auto;
+    transition: left 0.3s ease-in-out;
+}
+
+.chat-sidebar h2 {
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+}
+
+.chat-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.chat-sidebar ul li {
+    padding: 15px;
+}
+
+.chat-sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.chat-sidebar ul li a:hover {
+    background-color: #555;
+}

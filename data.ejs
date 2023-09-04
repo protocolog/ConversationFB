@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="form-container" style="margin-left: 31%;">
+		<img src="logo.jpeg" alt="RichPanel" style=" width:100px;height: 100px;" class="logotheclass">
+		<h2>Facebook Page Integration</h2>
+		<button id="start-conversation">Start Conversation</button>
+		<br><br>
+		<button>
+			<a href="/logout">Logout</a>
+		</button>
+	</div>
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+	<div id="authorization-code"></div>
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+		const startConversationButton = document.getElementById('start-conversation');
+
+		startConversationButton.addEventListener('click', function () {
+			const facebookLoginPopup = false;
+			const checkPopupClosed = setInterval(function () {
+				if (!facebookLoginPopup || facebookLoginPopup.closed) {
+					clearInterval(checkPopupClosed);
+					const lastPageWindow = window.open('/lastpage', 'last-page', 'width=400,height=300');
+					window.close();
+				}
+			}, 1000);
+		});
+	});
+
+	</script>
+</body>
+</html>
+
+
+
+

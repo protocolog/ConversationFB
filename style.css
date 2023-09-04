@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:darkblue;
+    margin: 0;
+    padding: 0;
+}
+.logotheclass{position: relative; 
+    width: 150px; 
+    height: 150px; 
+    overflow: hidden; 
+    border-radius: 50%; 
+} 
+.logotheclass img { width: 100%; 
+    height: auto; }
+
+
+form{
+    padding:0px;
+    text-align: center;
+    border-radius: 15px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#aa{
+    background-color: #002051;
+    color:white;
+    font-size: 30px;
+}
+.form-container {
+    text-align: center;
+    max-width: 40%;
+    align-items: center;
+    align-self: center;
+    background-color: #fff;
+    padding: 70px;
+    opacity: 1;
+    border-radius: 15px;
+    text-align: center;
+    margin: 20px;
+}
+#start-conversation{
+    text-align: center;
+    color:white;
+}
+.outers{
+    color:#0066ff;
+    font-size: 18px;
+}
+.outers:hover{
+    color:red;
+}
+.form-container:hover{
+    padding: 70px;
+    opacity: 1;
+    border-radius: 15px;
+    box-shadow: 0 40px 40px rgba(5, 111, 177, 0.1);
+    text-align: center;
+    margin: 20px;
+    animation-duration: 10s;
+    /* animation:ease-in; */
+    transition: 3ms;
+}
+h2 {
+    color: #002051;
+}
+
+.input-container {
+    margin: 10px 0;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover{
+    background-color:#002051;
+    color:white;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    border-color: #002051;
+    transition: 3;
+}
+a{
+    color:white;  
+}
+a:hover{
+    color:white;
+    text-emphasis: none;
+    text-decoration: none;
+}
+.fbapp{
+    text-align: center;
+}

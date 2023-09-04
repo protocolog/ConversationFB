@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="newchat.css">
+    <title>Chat Web App</title>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Chat</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="chat-sidebar" id="chatSidebar">
+        <h2>Chat</h2>
+        <ul>
+            <li><a href="#">Deepak</a></li>
+            <li><a href="#">Naina</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const chatBtn = document.querySelector('.sidebar ul li:first-child a');
+const chatSidebar = document.getElementById('chatSidebar');
+
+chatBtn.addEventListener('click', () => {
+    chatSidebar.style.left = '0';
+});
+
+// Close the chat sidebar when clicking outside of it
+document.addEventListener('click', (event) => {
+    if (event.target !== chatBtn && event.target !== chatSidebar) {
+        chatSidebar.style.left = '-250px';
+    }
+});
+
+    </script>
+</body>
+</html>

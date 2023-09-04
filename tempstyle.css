@@ -1,0 +1,118 @@
+/* Style for the main side navbar */
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:darkviolet;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidenav a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.sidenav a:hover{
+    font-size: 25px;
+}
+/* Style for the sub-navigation that opens when you click on "Chat" */
+.chat-sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 250px;
+    background-color:maroon;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat-sidenav a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+/* Style to slide open the sub-navigation */
+.sidenav.open-chat-sidenav + .chat-sidenav {
+    width: 250px;
+}
+/* Add styles for the chat conversation boxes */
+.chat-content {
+    margin-left: 250px;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%;
+}
+/* Hide message input boxes and buttons by default */
+.chat-box .message-input,
+.chat-box .send-button {
+    display: none;
+}
+
+/* ... (previous CSS styles) ... */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.chat-box {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    bottom: 0;
+    max-width: 80%;
+}
+.chat-box input{
+    width: 70%;
+    padding:10px;
+    border-radius: 20px;
+    border-color:slateblue;
+}
+.chat-box button{
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: darkblue;
+    color:white;
+    font-size:15px;
+}
+.chat-box button:hover{
+    color:darkblue;
+    background-color: white;
+}
+.message.sent {
+    background-color: #0084ff;
+    color: #fff;
+    align-self: flex-end;
+}
+
+/* Additional CSS for message styling */
+.logos{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
